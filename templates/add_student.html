@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h2>Add New Student</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="roll_number" class="form-label">Roll Number / ID</label>
+                    <input type="text" class="form-control" id="roll_number" name="roll_number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Student Image</label>
+                    <input type="file" class="form-control" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                    <div class="form-text">Please upload a clear front-facing photo of the student's face.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Student</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

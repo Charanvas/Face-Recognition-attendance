@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h2>Face Recognition</h2>
+        </div>
+        <div class="card-body text-center">
+            <p class="mb-3">The system will detect faces in the webcam feed and display the names of recognized students.</p>
+            <div class="mb-3">
+                <img src="{{ url_for('video_feed') }}" width="640" height="480" class="img-fluid border rounded">
+            </div>
+            <p class="text-muted">If a face is not recognized, it will be labeled as "Unknown".</p>
+        </div>
+    </div>
+{% endblock %}
